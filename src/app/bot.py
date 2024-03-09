@@ -3,6 +3,8 @@ from loguru import logger
 
 from src.app.loader import bot, dp
 from src.handlers.commands import router as router_commands
+from src.handlers.dialog import router as router_dialog
+from src.handlers.callbacks import router as router_callbacks
 
 
 class BankChatBot:
@@ -15,8 +17,9 @@ class BankChatBot:
         dp.shutdown.register(self.shutdown_event)
 
         dp.include_router(router_commands)
+        dp.include_router(router_dialog)
+        dp.include_router(router_callbacks)
  
-
     async def start(self):
         """
         Starts the bot by polling the dispatcher.
