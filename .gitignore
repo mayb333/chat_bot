@@ -2,8 +2,9 @@ __pycache__/
 .DS_Store
 .env
 .idea
-.git
 .project
 .settings
 .classpath
 .metadata
+.xml
+.iml
