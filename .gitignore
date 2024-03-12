@@ -1,8 +1,8 @@
+__pycache__/
 .DS_Store
 .env
 .idea
 .git
-.DS_Store
 .project
 .settings
 .classpath
