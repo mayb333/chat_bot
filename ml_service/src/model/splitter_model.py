@@ -3,7 +3,8 @@ from sentence_transformers import SentenceTransformer, util
 import spacy
 from abc import ABC, abstractmethod
 
-class Splitter(ABC):#
+
+class Splitter(ABC):  #
 
     def __init__(self):
         pass
@@ -40,7 +41,6 @@ class SentenceTransformersSimilarity():
             similarities.append(sim)
 
         return similarities
-
 
 
 class SimilarSentenceSplitter(Splitter):
