@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  bot_service:
+    build: .
+    working_dir: /app/bot_service
+    command: ./run_bot.sh
+    volumes:
+      - ./bot_service/src:/app/bot_service/src
+
+  ml_service:
+    build: .
+    working_dir: /app/ml_service
+    command: ./run_ml.sh
+    volumes:
+      - ./ml_service/src:/app/ml_service/src

@@ -18,4 +18,4 @@ async def get_context(query: str) -> List[Context]:
 async def predict(query: str) -> Prediction:
     context = await get_context(query=query)
     print(context)
-    return Prediction(text="Best answer", urls=["https://some_url_1.com", "https://some_url_2.com"])
+    return Prediction(text="Best answer", urls=["google.com", "yandex.ru"])
