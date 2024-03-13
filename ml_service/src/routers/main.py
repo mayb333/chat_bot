@@ -2,6 +2,7 @@ from fastapi import APIRouter
 
 from typing import List
 
+from src.config import PROMPT_TEMPLATE
 from src.routers.schemas import Context, Prediction
 
 router = APIRouter()
