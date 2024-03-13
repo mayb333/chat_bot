@@ -34,7 +34,3 @@ def create_prediction(query: str, context: str) -> str:
                              repetition_penalty=1.5, temperature=0.5, top_p=0.77)
 
     return tokenizer.decode(outputs[0][1:])
-
-
-def passer():
-    pass
