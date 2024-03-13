@@ -2,9 +2,9 @@ import asyncio
 from loguru import logger
 
 from src.app.loader import bot, dp
-from src.handlers.commands import router as router_commands
-from src.handlers.dialog import router as router_dialog
-from src.handlers.callbacks import router as router_callbacks
+from src.routers.commands import router as router_commands
+from src.routers.dialog import router as router_dialog
+from src.routers.callbacks import router as router_callbacks
 
 
 class BankChatBot:
