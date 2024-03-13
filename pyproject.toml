@@ -7,24 +7,22 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-requests = "^2.31.0"
-beautifulsoup4 = "^4.12.3"
-lxml = "^5.1.0"
-aiogram = "^3.4.1"
-loguru = "^0.7.2"
-python-dotenv = "^1.0.1"
-chromadb = "^0.4.24"
-pandas = "^2.2.1"
+requests = "2.31.0"
+beautifulsoup4 = "4.12.3"
+lxml = "5.1.0"
+aiogram = "3.4.1"
+loguru = "0.7.2"
+python-dotenv = "1.0.1"
+chromadb = "0.4.24"
+pandas = "2.2.1"
 sentence-transformers = "2.2.2"
 torch = "2.1.2"
 transformers = "4.38.1"
 matplotlib = "3.7.5"
 seaborn = "0.12.2"
-pymupdf = "^1.23.26"
+pymupdf = "1.23.26"
+fastapi = "^0.110.0"
 
-
-[tool.poetry.group.dev.dependencies]
-ipykernel = "^6.29.3"
 
 [build-system]
 requires = ["poetry-core"]
