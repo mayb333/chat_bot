@@ -1,6 +1,6 @@
 from src.model.splitter_model import chunks_splitter_model
 from embeddings_model import embeddings_model
-from src.model.prediction_model import create_prediction_model
+from src.model.prediction_model import prediction_model
 from typing import List
 import torch
 
@@ -14,13 +14,13 @@ def create_chunks(texts: List) -> List[List[str]]:
     return result
 
 
-def create_embeddings(text) -> List:
+def embed(text: str) -> List:
     model = embeddings_model()
     return model.encode(text, normalize_embeddings=True)
 
 
-def create_prediction(query: str, context: str) -> str:
-    model, tokenizer = create_prediction_model()
+def prediction(query: str, context: str) -> str:
+    model, tokenizer = prediction_model()
 
     prompt = f"Ты - представитель банка России.Ответь на вопрос, основываясь на приведенном ниже контексте.\
 Если не знаешь ответа, то просто скажи, что не знаешь, не пытайся выдумывать.\n{context}\n\n\

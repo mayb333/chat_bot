@@ -76,7 +76,7 @@ class SimilarSentenceSplitter(Splitter):
         return groups
 
 
-def chunks_splitter_model():  # -> text splitter
+def chunks_splitter_model():
     model = SentenceTransformersSimilarity()
     sentence_splitter = SpacySentenceSplitter()
     splitter = SimilarSentenceSplitter(model, sentence_splitter=sentence_splitter)
