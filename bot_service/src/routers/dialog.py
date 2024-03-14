@@ -11,7 +11,7 @@ async def answer(message: types.Message):
     query = message.text
 
     async with aiohttp.ClientSession() as session:
-        async with session.get(f"http://127.0.0.1:8000/predict?query={query}") as response:
+        async with session.get(f"http://127.0.0.1:1111/predict?query={query}") as response:
             result = await response.json()
             answer = result.get("text", "")
             relevant_urls = result.get("urls", []) 

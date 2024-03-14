@@ -1,15 +1,23 @@
 version: '3.8'
 services:
-  bot_service:
-    build: .
-    working_dir: /app/bot_service
-    command: ./run_bot.sh
-    volumes:
-      - ./bot_service/src:/app/bot_service/src
-
   ml_service:
+    container_name: ml
     build: .
+    env_file:
+      - .env
     working_dir: /app/ml_service
     command: ./run_ml.sh
     volumes:
-      - ./ml_service/src:/app/ml_service/src
+      - ./ml_service:/app/ml_service
+
+  bot_service:
+    container_name: bot
+    depends_on:
+      - ml_service
+    build: .
+    env_file:
+      - .env
+    working_dir: /app/bot_service
+    command: ./run_bot.sh
+    volumes:
+      - ./bot_service:/app/bot_service
